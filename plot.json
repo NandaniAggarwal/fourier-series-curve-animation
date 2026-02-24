@@ -1,0 +1,576 @@
+{
+ "geoms": {
+ "geom1_line_curve": {
+ "geom": "line",
+"classed": "geom1_line_curve",
+"aes": {
+ "x": "x",
+"y": "y" 
+},
+"params": {
+ "na.rm": false,
+"na.rm": false,
+"colour": "#000000",
+"size":        1,
+"alpha":      0.3,
+"linetype": "dashed",
+"help": "The target square wave we want to approximate." 
+},
+"types": {
+ "x": "numeric",
+"y": "numeric",
+"PANEL": "integer",
+"group": "character" 
+},
+"chunk_order": [],
+"nest_order": [],
+"subset_order": [],
+"chunks": 1,
+"total": 1 
+},
+"geom2_line_curve": {
+ "geom": "line",
+"classed": "geom2_line_curve",
+"aes": {
+ "x": "x",
+"y": "y",
+"showSelected1": "n_terms" 
+},
+"params": {
+ "na.rm": false,
+"na.rm": false,
+"colour": "#006400",
+"size":      1.2,
+"showSelected": "n_terms",
+"help": "The Fourier Series approximation using sine waves.",
+"help_showSelected": "n_terms" 
+},
+"types": {
+ "x": "numeric",
+"y": "numeric",
+"showSelected1": "integer",
+"PANEL": "integer",
+"group": "character" 
+},
+"chunk_order": [
+ "n_terms" 
+],
+"nest_order": [],
+"subset_order": [],
+"columns": {
+ "common": [
+ "group",
+"x" 
+] 
+},
+"chunks": {
+ "1": 1,
+"2": 2,
+"3": 3,
+"4": 4,
+"5": 5,
+"6": 6,
+"7": 7,
+"8": 8,
+"9": 9,
+"10": 10,
+"11": 11,
+"12": 12,
+"13": 13,
+"14": 14,
+"15": 15 
+},
+"total": 15 
+},
+"geom3_tallrect_error": {
+ "geom": "tallrect",
+"classed": "geom3_tallrect_error",
+"aes": {
+ "xmin": "n_terms - 0.5",
+"xmax": "n_terms + 0.5",
+"clickSelects": "n_terms" 
+},
+"params": {
+ "na.rm": false,
+"na.rm": false,
+"alpha":      0.2,
+"fill": "#0000FF",
+"clickSelects": "n_terms",
+"help": "Click a bar to see the approximation for that number of harmonics.",
+"help_clickSelects": "n_terms" 
+},
+"types": {
+ "xmin": "numeric",
+"xmax": "numeric",
+"clickSelects": "integer",
+"PANEL": "integer",
+"group": "character" 
+},
+"chunk_order": [],
+"nest_order": [],
+"subset_order": [],
+"chunks": 1,
+"total": 1 
+},
+"geom4_line_error": {
+ "geom": "line",
+"classed": "geom4_line_error",
+"aes": {
+ "x": "n_terms",
+"y": "error" 
+},
+"params": {
+ "na.rm": false,
+"na.rm": false,
+"colour": "#FF0000",
+"size":        1 
+},
+"types": {
+ "x": "numeric",
+"y": "numeric",
+"PANEL": "integer",
+"group": "character" 
+},
+"chunk_order": [],
+"nest_order": [],
+"subset_order": [],
+"chunks": 1,
+"total": 1 
+},
+"geom5_point_error": {
+ "geom": "point",
+"classed": "geom5_point_error",
+"aes": {
+ "x": "n_terms",
+"y": "error",
+"showSelected1": "n_terms" 
+},
+"params": {
+ "na.rm": false,
+"na.rm": false,
+"colour": "#000000",
+"size":        3,
+"showSelected": "n_terms",
+"help_showSelected": "n_terms" 
+},
+"types": {
+ "x": "numeric",
+"y": "numeric",
+"showSelected1": "integer",
+"PANEL": "integer",
+"group": "character" 
+},
+"chunk_order": [],
+"nest_order": [
+ "showSelected1" 
+],
+"subset_order": [
+ "showSelected1" 
+],
+"chunks": 1,
+"total": 1 
+} 
+},
+"time": {
+ "variable": "n_terms",
+"ms":     1500,
+"sequence": [ "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15" ] 
+},
+"selectors": {
+ "n_terms": {
+ "is.variable.value": false,
+"type": "single",
+"showSelected": true,
+"chunks": "n_terms",
+"clickSelects": true,
+"selected": "1",
+"levels": [ "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15" ],
+"update": [
+ "geom2_line_curve",
+"geom3_tallrect_error",
+"geom5_point_error" 
+] 
+} 
+},
+"plots": {
+ "curve": {
+ "panel_margin_lines":     0.27,
+"legend": {},
+"strips": {
+ "top": [
+ "" 
+],
+"right": [
+ "" 
+],
+"n": {
+ "top":        0,
+"right":        0 
+} 
+},
+"layout": {
+ "PANEL": [ 1 ],
+"ROW": [ 1 ],
+"COL": [ 1 ],
+"SCALE_X": [ 1 ],
+"SCALE_Y": [ 1 ],
+"AXIS_X": [ true ],
+"AXIS_Y": [ true ],
+"coord_fixed": [ false ],
+"width_proportion": [        1 ],
+"height_proportion": [        1 ] 
+},
+"panel_background": [],
+"panel_border": [],
+"grid_major": {
+ "colour": "#E5E5E5",
+"size":      0.2,
+"linetype":        1,
+"lineend": "butt",
+"loc": {
+ "x": [
+ [
+       -4,
+       0,
+       4 
+] 
+],
+"y": [
+ [
+       -1,
+    -0.5,
+       0,
+     0.5,
+       1 
+] 
+] 
+} 
+},
+"grid_minor": {
+ "colour": "#FAFAFA",
+"size":      0.5,
+"linetype":        1,
+"lineend": "butt",
+"loc": {
+ "x": [
+ [
+       -6,
+      -4,
+      -2,
+       0,
+       2,
+       4,
+       6 
+] 
+],
+"y": [
+ [
+    -1.25,
+      -1,
+   -0.75,
+    -0.5,
+   -0.25,
+       0,
+    0.25,
+     0.5,
+    0.75,
+       1,
+    1.25 
+] 
+] 
+} 
+},
+"axis1": {
+ "x": [
+       -4,
+       0,
+       4 
+],
+"xlab": [
+ "-4",
+"0",
+"4" 
+],
+"xrange": [ -6.911504, 6.911504 ],
+"xline": false,
+"xticks": false,
+"y": [
+       -1,
+    -0.5,
+       0,
+     0.5,
+       1 
+],
+"ylab": [
+ "-1.0",
+"-0.5",
+"0.0",
+"0.5",
+"1.0" 
+],
+"yrange": [ -1.400557, 1.400557 ],
+"yline": false,
+"yticks": false 
+},
+"xtitle": "x (Radians)",
+"strip_text_xsize": "12pt",
+"xsize": "12pt",
+"xangle":        0,
+"xanchor": "middle",
+"ytitle": "f(x)",
+"strip_text_ysize": "12pt",
+"ysize": "12pt",
+"yangle":        0,
+"yanchor": "end",
+"xlabs": [
+ "-4",
+"0",
+"4" 
+],
+"ylabs": [
+ "-1.0",
+"-0.5",
+"0.0",
+"0.5",
+"1.0" 
+],
+"title": "Fourier Series: Approximating a Square Wave",
+"title_size": "14.4pt",
+"options": {
+ "width":      400,
+"height":      400 
+},
+"span": {
+ "rowspan": null,
+"colspan": null,
+"last_in_row": null 
+},
+"geoms": [
+ "geom1_line_curve",
+"geom2_line_curve" 
+] 
+},
+"error": {
+ "panel_margin_lines":     0.27,
+"legend": {},
+"strips": {
+ "top": [
+ "" 
+],
+"right": [
+ "" 
+],
+"n": {
+ "top":        0,
+"right":        0 
+} 
+},
+"layout": {
+ "PANEL": [ 1 ],
+"ROW": [ 1 ],
+"COL": [ 1 ],
+"SCALE_X": [ 1 ],
+"SCALE_Y": [ 1 ],
+"AXIS_X": [ true ],
+"AXIS_Y": [ true ],
+"coord_fixed": [ false ],
+"width_proportion": [        1 ],
+"height_proportion": [        1 ] 
+},
+"panel_background": [],
+"panel_border": [],
+"grid_major": {
+ "colour": "#E5E5E5",
+"size":      0.2,
+"linetype":        1,
+"lineend": "butt",
+"loc": {
+ "x": [
+ [
+        1,
+       2,
+       3,
+       4,
+       5,
+       6,
+       7,
+       8,
+       9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15 
+] 
+],
+"y": [
+ [
+      0.1,
+     0.2,
+     0.3 
+] 
+] 
+} 
+},
+"grid_minor": {
+ "colour": "#FAFAFA",
+"size":      0.5,
+"linetype":        1,
+"lineend": "butt",
+"loc": {
+ "x": [
+ [
+        0,
+     0.5,
+       1,
+     1.5,
+       2,
+     2.5,
+       3,
+     3.5,
+       4,
+     4.5,
+       5,
+     5.5,
+       6,
+     6.5,
+       7,
+     7.5,
+       8,
+     8.5,
+       9,
+     9.5,
+      10,
+    10.5,
+      11,
+    11.5,
+      12,
+    12.5,
+      13,
+    13.5,
+      14,
+    14.5,
+      15,
+    15.5,
+      16 
+] 
+],
+"y": [
+ [
+     0.05,
+     0.1,
+    0.15,
+     0.2,
+    0.25,
+     0.3,
+    0.35 
+] 
+] 
+} 
+},
+"axis1": {
+ "x": [
+        1,
+       2,
+       3,
+       4,
+       5,
+       6,
+       7,
+       8,
+       9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15 
+],
+"xlab": [
+ "1",
+"2",
+"3",
+"4",
+"5",
+"6",
+"7",
+"8",
+"9",
+"10",
+"11",
+"12",
+"13",
+"14",
+"15" 
+],
+"xrange": [    -0.25,    16.25 ],
+"xline": false,
+"xticks": false,
+"y": [
+      0.1,
+     0.2,
+     0.3 
+],
+"ylab": [
+ "0.1",
+"0.2",
+"0.3" 
+],
+"yrange": [ 0.03377598, 0.359177 ],
+"yline": false,
+"yticks": false 
+},
+"xtitle": "Number of Harmonics (n)",
+"strip_text_xsize": "12pt",
+"xsize": "12pt",
+"xangle":        0,
+"xanchor": "middle",
+"ytitle": "Mean Absolute Error",
+"strip_text_ysize": "12pt",
+"ysize": "12pt",
+"yangle":        0,
+"yanchor": "end",
+"xlabs": [
+ "1",
+"2",
+"3",
+"4",
+"5",
+"6",
+"7",
+"8",
+"9",
+"10",
+"11",
+"12",
+"13",
+"14",
+"15" 
+],
+"ylabs": [
+ "0.1",
+"0.2",
+"0.3" 
+],
+"title": "Approximation Error (Residuals)",
+"title_size": "14.4pt",
+"options": {
+ "width":      400,
+"height":      400 
+},
+"span": {
+ "rowspan": null,
+"colspan": null,
+"last_in_row": null 
+},
+"geoms": [
+ "geom3_tallrect_error",
+"geom4_line_error",
+"geom5_point_error" 
+] 
+} 
+},
+"source": "https://github.com/NandaniAggarwal/R/blob/main/Fourier-series-curve.R",
+"title": "Fourier Series Interactive Demonstration" 
+}
